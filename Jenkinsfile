@@ -14,20 +14,7 @@ pipeline {
 
         stage('Conditional Execution') {
             steps {
-                script {
-                    if (params.ENVIRONMENT == 'dev') {
-                        echo "Deploying to Development environment"
-                        // Add dev deployment logic here
-                    } else if (params.ENVIRONMENT == 'staging') {
-                        echo "Deploying to Staging environment"
-                        // Add staging deployment logic here
-                    } else if (params.ENVIRONMENT == 'prod') {
-                        echo "Deploying to Production environment"
-                        // Add production deployment logic here
-                    } else {
-                        error("Invalid environment selected!")
-                    }
-                }
+                echo "Deploying to Development environment"
             }
         }
     }
